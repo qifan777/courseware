@@ -333,7 +333,9 @@
             },
             courseUpload() {
                 if (this.courseware.url.length > 0) {
-                    this.courseware.url = this.fileUrlList.join(";")
+                    if (this.fileUrlList.length > 0) {
+                        this.courseware.url = this.fileUrlList.join(";")
+                    }
                     this.$http.post("/cw-courseware/add", this.courseware).then((res) => {
                         if (res.data.data && res.data.data === true) {
                             this.$message({
@@ -356,7 +358,9 @@
             },
             courseUpdate() {
                 if (this.courseware.url.length > 0) {
-                    this.courseware.url = this.fileUrlList.join(";")
+                    if (this.fileUrlList.length > 0) {
+                        this.courseware.url = this.fileUrlList.join(";")
+                    }
                     this.$http.post("/cw-courseware/update", this.courseware).then((res) => {
                         if (res.data.data && res.data.data == true) {
                             this.$message.success("修改成功")

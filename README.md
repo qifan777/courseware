@@ -2,6 +2,8 @@
 
 一个可以上传课件,卖课件,并且在线预览课件(ppt,doc,pdf等)的小程序。接入了微信支付,小程序登录。代码量少，涉及的内容较多,适合新手学习。
 
+![](https://www.jarcheng.top/resource/20210224101704gh_9aa33d39f9a7_344.jpg)
+
 ### 涉及技术
 
 ##### 后端:
@@ -66,4 +68,4 @@
 1.  QQ: 1507906763
 2.  WX:  ljc666max
 4.  代做各种小程序,网站,app(h5)
-4.  我写的一个代取快递，帮忙的app(https://www.jarcheng.top/flash_help/)。F12手机端打开
+4.  我写的一个代取快递，帮忙的app。F12手机端打开 https://www.jarcheng.top/flash_help 

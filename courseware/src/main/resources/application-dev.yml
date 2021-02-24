@@ -1,0 +1,51 @@
+spring:
+  servlet:
+    multipart:
+      max-request-size: 100MB
+      max-file-size: 100MB
+  datasource:
+    url: jdbc:mysql://localhost:3306/courseware?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: '123456'
+    druid:
+      initial-size: 5
+      min-idle: 10
+      max-active: 20
+      web-stat-filter:
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
+      stat-view-servlet:
+        login-username: druid
+        login-password: druid
+  redis:
+    host: 192.168.31.112
+    database: 0
+    port: 6379
+    password:
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        max-idle: 8
+        min-idle: 0
+    timeout: 20000ms
+  application:
+    name: courseware
+mybatis:
+  type-aliases-package: com.jarcheng.mbg.model
+  mapper-locations: classpath:mapper/*.xml
+server:
+  port: 5000
+
+oss:
+  endpoint: '阿里云oss endpoint地址'
+  accessKeyId: 'oss accessKeyId'
+  accessKeySecret: 'oss accessKeySecret'
+  bucketName: 'oss 桶名'
+
+// https://www.yungouos.com/ 这边申请微信支付
+wxpay:
+  mchid: '商家id'
+  key: '支付key'
+wxmini:
+  appid: '小程序appid'
+  secret: '小程序密钥'

@@ -1,0 +1,104 @@
+{
+	"easycom": {
+		// 下载安装的方式需要前面的"@/"，npm安装的方式无需"@/"
+		// 下载安装方式
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+		// npm安装方式
+		// "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [{
+			"path": "pages/home/home",
+			"style": {
+				"navigationStyle": "custom"		
+			}
+		},
+		{
+			"path": "pages/user/user",
+			"style": {
+				"navigationStyle": "custom"
+			}
+
+		},
+		{
+			"path": "pages/courseware/courseware",
+			"style": {
+				"navigationBarTitleText": "课件管理",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationStyle": "custom"
+
+			}
+
+		}
+	    ,{
+            "path" : "pages/courseware/courseware-details",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        },
+		{
+			"path": "pages/user/user-edit",
+			"style": {
+				"navigationBarTitleText": "我的信息",
+				"enablePullDownRefresh": false
+			}
+		}
+        ,{
+            "path" : "pages/courseware/courseware-deep",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"tabBar": {
+		"borderStyle": "black",
+		"backgroundColor": "#f1f1f1",
+		"color": "#8F8F94",
+		"selectedColor": "#000000",
+		"list": [{
+				"pagePath": "pages/home/home",
+				"iconPath": "static/icon/home2.png",
+				"selectedIconPath": "static/icon/home.png",
+				"text": "首页"
+			},
+			//#ifdef MP-WEIXIN
+			{
+				"pagePath": "pages/courseware/courseware",
+				"iconPath": "static/icon/courseware2.png",
+				"selectedIconPath": "static/icon/courseware.png",
+				"text": "课件管理"
+			},
+			//#endif
+			//#ifndef MP-WEIXIN
+			{
+				"pagePath": "pages/courseware/courseware",
+				"iconPath": "static/icon/courseware2.png",
+				"selectedIconPath": "static/icon/courseware.png",
+				"text": "课件管理"
+			},
+			//#endif
+			{
+				"pagePath": "pages/user/user",
+				"iconPath": "static/icon/user2.png",
+				"selectedIconPath": "static/icon/user.png",
+				"text": "我"
+			}
+		]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "起凡课件助手",
+		"navigationBarBackgroundColor": "#ffffff",
+		"backgroundColor": "#f0f0f0"
+	}
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jarcheng.mbg.dao.UserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.jarcheng.mbg.model.dto.UserDto">
+        <id column="id" property="id"/>
+        <result column="nickname" property="nickname"/>
+        <result column="username" property="username"/>
+        <result column="uuid" property="uuid"/>
+
+        <result column="password" property="password"/>
+        <result column="gender" property="gender"/>
+        <result column="phone_number" property="phoneNumber"/>
+        <result column="portrait" property="portrait"/>
+        <result column="background" property="background"/>
+    </resultMap>
+    <resultMap id="userPermission" type="com.jarcheng.mbg.model.dto.UserDto">
+        <id column="user_id" jdbcType="INTEGER" property="id"/>
+        <collection property="permissions" ofType="String">
+            <result column="permission"/>
+        </collection>
+    </resultMap>
+    <select id="getUserPermission" parameterType="java.lang.Integer" resultMap="userPermission">
+        select distinct r.permission, u.user_id
+        from sys_users_roles u
+                 left join sys_role_permission r on u.role_id = r.role_id
+        where u.user_id = #{userId}
+    </select>
+    <select id="getUserInfo" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select u.*
+        from user u
+        WHERE u.uuid = #{uuid};
+    </select>
+</mapper>

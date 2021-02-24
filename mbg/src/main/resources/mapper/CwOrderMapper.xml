@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jarcheng.mbg.dao.CwOrderMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.jarcheng.mbg.model.CwOrder">
+        <id column="id" property="id" />
+        <result column="order_sn" property="orderSn" />
+        <result column="cw_id" property="cwId" />
+        <result column="user_id" property="userId" />
+        <result column="price" property="price" />
+        <result column="create_time" property="createTime" />
+        <result column="pay_time" property="payTime" />
+        <result column="is_pay" property="isPay" />
+        <result column="pay_type" property="payType" />
+    </resultMap>
+
+</mapper>

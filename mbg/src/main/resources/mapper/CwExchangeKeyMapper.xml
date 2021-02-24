@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jarcheng.mbg.dao.CwExchangeKeyMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.jarcheng.mbg.model.CwExchangeKey">
+        <id column="id" property="id" />
+        <result column="ex_key" property="exKey" />
+        <result column="cw_id" property="cwId" />
+        <result column="is_used" property="isUsed" />
+        <result column="create_time" property="createTime" />
+        <result column="use_time" property="useTime" />
+        <result column="user_id" property="userId" />
+    </resultMap>
+
+</mapper>

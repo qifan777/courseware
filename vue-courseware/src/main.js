@@ -16,10 +16,10 @@ import {
 } from 'element-ui'
 
 const OSSParams = {
-    region: 'oss 桶的区域',
+    region: 'oss 桶的区域(例如:oss-cn-qingdao,和后端格式不一样)',
     accessKeyId: 'oss key',
     accessKeySecret: 'oss secret',
-    bucket: '桶名'
+    bucket: '桶名(例如:my-community,和后端格式不也有)'
 }
 let client = new OSS(OSSParams);
 Vue.prototype.$client = client
